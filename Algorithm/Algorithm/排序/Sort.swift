@@ -9,7 +9,7 @@
 import Foundation
 
 
-//归并排序
+//MARK:归并排序
 func mergeSort<T:Comparable>(_ arr:[T]) -> [T]{
     
     guard arr.count > 1 else {
@@ -67,3 +67,12 @@ func quickSort<T:Comparable>(_ arr:[T]) -> [T]{
     
     return quickSort(less) + equal + quickSort(greater)
 }
+//MARK:堆排序
+
+public func kyheapsort<T>(_ a: [T], _ sort: @escaping (T, T) -> Bool) -> [T] {
+    let reverseOrder = { i1, i2 in sort(i2, i1) }
+    var h = Heap(array: a, sort: reverseOrder)
+    return h.sort()
+}
+
+
