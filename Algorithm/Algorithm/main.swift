@@ -19,4 +19,11 @@ var heap1 = Heap.init(array: [7,5,19,8,4,1,20,13,16], sort: {$0<$1})
 //heap1.insert(3)
 //print(heap1.nodes)
 
-print(kyheapsort([7,5,19,8,4,1,20,13,16], {$0<$1}))
+//print(kyheapsort([7,5,19,8,4,1,20,13,16], {$0<$1}))
+
+//knapsack(weights: [1,2,3,29,19,20,43], values: [20,34,123,34,1,33,56], n: 7, w: 8)
+
+knapsack(weights: [2,2,4,6,3], n:5 , w: 9)
+
+//knapsack3(weights: [2,2,4,6,3], values:[3,4,8,9,6],n:5 , w: 9)
+

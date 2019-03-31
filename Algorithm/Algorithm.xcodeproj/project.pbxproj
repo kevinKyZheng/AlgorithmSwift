@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813C4718225055E70096FE91 /* Dyanmic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813C4717225055E70096FE91 /* Dyanmic.swift */; };
 		815E4190224EF5ED003079A6 /* BackTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E418F224EF5ED003079A6 /* BackTrack.swift */; };
 		815E4192224F0C5C003079A6 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E4191224F0C5C003079A6 /* Heap.swift */; };
 		816D4F9A224DBC2200014DA5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F99224DBC2200014DA5 /* main.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		813C4717225055E70096FE91 /* Dyanmic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dyanmic.swift; sourceTree = "<group>"; };
 		815E418F224EF5ED003079A6 /* BackTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTrack.swift; sourceTree = "<group>"; };
 		815E4191224F0C5C003079A6 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		816D4F96224DBC2200014DA5 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				815E418F224EF5ED003079A6 /* BackTrack.swift */,
+				813C4717225055E70096FE91 /* Dyanmic.swift */,
 			);
 			path = "算法思想";
 			sourceTree = "<group>";
@@ -81,11 +84,11 @@
 		816D4F98224DBC2200014DA5 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				816D4F99224DBC2200014DA5 /* main.swift */,
 				815E418E224EF5B5003079A6 /* 算法思想 */,
 				816D4FA6224DBD4B00014DA5 /* 图 */,
 				816D4FA3224DBCD700014DA5 /* 搜索 */,
 				816D4FA2224DBCCC00014DA5 /* 排序 */,
-				816D4F99224DBC2200014DA5 /* main.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815E4192224F0C5C003079A6 /* Heap.swift in Sources */,
+				813C4718225055E70096FE91 /* Dyanmic.swift in Sources */,
 				815E4190224EF5ED003079A6 /* BackTrack.swift in Sources */,
 				816D4FAD224DBD5C00014DA5 /* Graph.swift in Sources */,
 				816D4FAC224DBD5C00014DA5 /* AdjacencyListGraph.swift in Sources */,

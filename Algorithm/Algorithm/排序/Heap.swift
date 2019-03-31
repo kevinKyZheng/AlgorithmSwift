@@ -79,6 +79,7 @@ public struct Heap<T> {
             return peekNode
         }
     }
+    
     //MARK:堆化相关操作
     //从上往下堆化
     internal mutating func shiftDown(from index:Int,until endIndex:Int){
@@ -116,16 +117,15 @@ public struct Heap<T> {
 
         nodes[childIndex] = child //最终的子节点index的位置,换成最早的那个子节点
     }
-
 }
 
 extension Heap {
     public mutating func sort() -> [T]{
-        for i in stride(from: 1, to: nodes.count, by: 1).reversed() { 
+        for i in stride(from: 1, to: nodes.count, by: 1).reversed() {
             nodes.swapAt(0, i)
             shiftDown(from: 0, until: i)
         }
-        
+
         return nodes
     }
 }
