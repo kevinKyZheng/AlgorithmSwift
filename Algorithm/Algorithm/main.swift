@@ -27,3 +27,13 @@ knapsack(weights: [2,2,4,6,3], n:5 , w: 9)
 
 //knapsack3(weights: [2,2,4,6,3], values:[3,4,8,9,6],n:5 , w: 9)
 
+let list = LinkedList<String>()
+print(list.isEmpty)
+list.append("1")
+list.append("2")
+list.append("3")
+list.append("4")
+//print(list)
+print(list.node(at: 2).value)
+
+

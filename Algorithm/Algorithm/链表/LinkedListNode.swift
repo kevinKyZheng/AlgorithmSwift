@@ -1,0 +1,19 @@
+//
+//  LinkedListNode.swift
+//  Algorithm
+//
+//  Created by ios on 2019/4/2.
+//  Copyright © 2019年 WT. All rights reserved.
+//
+
+import Foundation
+
+public class LinkedListNode<T>{
+    var value:T
+    var next:LinkedListNode<T>?
+    var previous:LinkedListNode<T>?
+    
+    public init(value:T){
+        self.value = value
+    }
+}

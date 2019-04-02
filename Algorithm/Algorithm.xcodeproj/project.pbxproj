@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812A0CCC2252E63D0079C1D0 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A0CCB2252E63D0079C1D0 /* LinkedList.swift */; };
+		812A0CCE2252E7380079C1D0 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A0CCD2252E7380079C1D0 /* LinkedListNode.swift */; };
 		813C4718225055E70096FE91 /* Dyanmic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813C4717225055E70096FE91 /* Dyanmic.swift */; };
 		815E4190224EF5ED003079A6 /* BackTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E418F224EF5ED003079A6 /* BackTrack.swift */; };
 		815E4192224F0C5C003079A6 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E4191224F0C5C003079A6 /* Heap.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		812A0CCB2252E63D0079C1D0 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		812A0CCD2252E7380079C1D0 /* LinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
 		813C4717225055E70096FE91 /* Dyanmic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dyanmic.swift; sourceTree = "<group>"; };
 		815E418F224EF5ED003079A6 /* BackTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTrack.swift; sourceTree = "<group>"; };
 		815E4191224F0C5C003079A6 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812A0CCA2252E6270079C1D0 /* 链表 */ = {
+			isa = PBXGroup;
+			children = (
+				812A0CCB2252E63D0079C1D0 /* LinkedList.swift */,
+				812A0CCD2252E7380079C1D0 /* LinkedListNode.swift */,
+			);
+			path = "链表";
+			sourceTree = "<group>";
+		};
 		815E418E224EF5B5003079A6 /* 算法思想 */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				816D4F99224DBC2200014DA5 /* main.swift */,
+				812A0CCA2252E6270079C1D0 /* 链表 */,
 				815E418E224EF5B5003079A6 /* 算法思想 */,
 				816D4FA6224DBD4B00014DA5 /* 图 */,
 				816D4FA3224DBCD700014DA5 /* 搜索 */,
@@ -178,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812A0CCE2252E7380079C1D0 /* LinkedListNode.swift in Sources */,
 				815E4192224F0C5C003079A6 /* Heap.swift in Sources */,
 				813C4718225055E70096FE91 /* Dyanmic.swift in Sources */,
 				815E4190224EF5ED003079A6 /* BackTrack.swift in Sources */,
@@ -187,6 +202,7 @@
 				816D4FA1224DBC8300014DA5 /* Sort.swift in Sources */,
 				816D4FAB224DBD5C00014DA5 /* Edge.swift in Sources */,
 				816D4FAE224DBD5C00014DA5 /* Vertex.swift in Sources */,
+				812A0CCC2252E63D0079C1D0 /* LinkedList.swift in Sources */,
 				816D4FA5224DBCEA00014DA5 /* BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
