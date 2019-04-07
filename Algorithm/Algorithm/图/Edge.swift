@@ -28,12 +28,12 @@ public struct Edge<T>:Equatable where T : Hashable{
     public let weight:Double?
 }
 
-extension Edge:Hashable{
-    public var hashValue:Int{
-        var string = "\(from.description)\(to.description)"
-        if weight != nil {
-            string.append("\(weight!)")
-        }
-        return string.hashValue
-    }
-}
+//extension Edge:Hashable{
+//    public var hashValue:Int{
+//        var string = "\(from.description)\(to.description)"
+//        if weight != nil {
+//            string.append("\(weight!)")
+//        }
+//        return string.hashValue
+//    }
+//}

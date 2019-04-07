@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class LinkedListNode<T>{
+public class LinkedListNode<T> where T:Equatable{
     var value:T
     var next:LinkedListNode<T>?
     var previous:LinkedListNode<T>?
@@ -16,4 +16,12 @@ public class LinkedListNode<T>{
     public init(value:T){
         self.value = value
     }
+}
+
+extension LinkedListNode:CustomStringConvertible{
+    
+    public var description: String {
+        return "\(self.value)"
+    }
+    
 }

@@ -14,15 +14,15 @@ public struct Vertex<T>:Equatable where T: Hashable{
     public let index: Int
 }
 
-extension Vertex:Hashable{
-    public var hasValue:Int{
-        return "\(data)\(index)".hashValue
-    }
-}
-
-extension Vertex:CustomStringConvertible{
-    public var description:String{
-        return "\(index)\(data)"
-    }
-}
+//extension Vertex:Hashable{
+//    public var hasValue:Int{
+//        return "\(data)\(index)".hashValue
+//    }
+//}
+//
+//extension Vertex:CustomStringConvertible{
+//    public var description:String{
+//        return "\(index)\(data)"
+//    }
+//}
 
