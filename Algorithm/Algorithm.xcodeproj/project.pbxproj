@@ -19,6 +19,7 @@
 		816D4F9A224DBC2200014DA5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F99224DBC2200014DA5 /* main.swift */; };
 		816D4FA1224DBC8300014DA5 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4FA0224DBC8300014DA5 /* Sort.swift */; };
 		816D4FA5224DBCEA00014DA5 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4FA4224DBCEA00014DA5 /* BinarySearch.swift */; };
+		81892D61225AEB7D008D08C4 /* SignleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81892D60225AEB7D008D08C4 /* SignleLinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		816D4F99224DBC2200014DA5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		816D4FA0224DBC8300014DA5 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		816D4FA4224DBCEA00014DA5 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		81892D60225AEB7D008D08C4 /* SignleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignleLinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 		812A0CCA2252E6270079C1D0 /* 链表 */ = {
 			isa = PBXGroup;
 			children = (
-				812A0CCB2252E63D0079C1D0 /* LinkedList.swift */,
 				812A0CCD2252E7380079C1D0 /* LinkedListNode.swift */,
+				81892D60225AEB7D008D08C4 /* SignleLinkedList.swift */,
+				812A0CCB2252E63D0079C1D0 /* LinkedList.swift */,
 				09FD99BE22573FF2005816DD /* LRU.swift */,
 				09FD99C02257522D005816DD /* ListReverse.swift */,
 			);
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81892D61225AEB7D008D08C4 /* SignleLinkedList.swift in Sources */,
 				09FD99BF22573FF2005816DD /* LRU.swift in Sources */,
 				812A0CCE2252E7380079C1D0 /* LinkedListNode.swift in Sources */,
 				815E4192224F0C5C003079A6 /* Heap.swift in Sources */,

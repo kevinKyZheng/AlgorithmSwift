@@ -33,8 +33,20 @@ public class LinkedList<T> where T:Equatable{
         return node
     }
     
+    public var count:Int{
+        guard var node = head else {
+            return 0
+        }
+        var a = 1
+        while let next = node.next {
+            a += 1
+            node = next
+        }
+        return a
+    }
+    
     public func node(at index:Int) -> Node{
-        assert(isEmpty, "不能为空")
+        assert(!isEmpty, "不能为空")
         if index == 0 {
             return head!
         }else{
@@ -152,39 +164,4 @@ extension LinkedList:CustomStringConvertible{
     }
 }
 
-public func mergeList(first:LinkedList<Int>,second:LinkedList<Int>) -> LinkedList<Int>{
-    
-    guard let firstHead = first.head else{
-        return second
-    }
-    guard let secondHead = second.head else {
-        return first
-    }
-    
-    let result = first
-    let secodeResult = second
-    
-    var node = secodeResult.remove(node: secodeResult.head!)!
-    
-    var Anode = result.head!
-    
-    while let next = Anode.next{
-        while node.value > Anode.value && node.value < (Anode.next?.value)!{
-            
-            node.next = next
-            next.previous = node
-            Anode.next = node
-            node.previous = Anode
-            
-//            if secodeResult.head != nil{
-                node = secodeResult.remove(node: secodeResult.head!)!
-//            }else{
-//                break
-//            }
-            
-        }
-        Anode = next
-    }
-    return result
-    
-}
+

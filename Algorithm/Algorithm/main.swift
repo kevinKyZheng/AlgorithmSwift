@@ -26,20 +26,38 @@ import Foundation
 //knapsack(weights: [2,2,4,6,3], n:5 , w: 9)
 
 //knapsack3(weights: [2,2,4,6,3], values:[3,4,8,9,6],n:5 , w: 9)
+//MARK:链表
 
-//let list1 = LinkedList<Int>()
-//let list2 = LinkedList<Int>()
-//
-//
-//list1.append(1)
+let list1 = LinkedList<Int>()
+let list2 = LinkedList<Int>()
+var list3 = SingleLinkedList<Int>()
+
+list3.append(element: 1)
+list3.append(element: 2)
+list3.append(element: 3)
+list3.append(element: 4)
+//list3.append(element: 5)
+//print(list3.removeLast()?.value)
+
+print(reverse(list: list3))
+
+list1.append(1)
 //list2.append(2)
-//list1.append(3)
-//list2.append(4)
-//list2.append(5)
-//list2.append(9)
-//list2.append(10)
+list1.append(8)
+//list2.append(3)
+list1.append(5)
+list1.append(20)
+//list2.append(7)
+list1.append(30)
+
+//list1.append(list1.head!)
 //list2.append(50)
-//
+
+//print(detectCycle(list: list1))
+//print(removelastNode(list: list1, index: 4))
+print(list1)
+print(getMiddleNode(list1))
+
 //print(mergeList(first: list1,second: list2))
 
 //print(list)
@@ -58,11 +76,11 @@ import Foundation
 //print(l.list)
 
 
-var q = CycleQueue<Int>.init(count:3)
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(3)
-q.enqueue(3)
+//var q = CycleQueue<Int>.init(count:3)
+//q.enqueue(1)
+//q.enqueue(2)
+//q.enqueue(3)
+//q.enqueue(3)
 //q.enqueue(3)
 //q.enqueue(3)
 
@@ -72,7 +90,7 @@ q.enqueue(3)
 //print(q.dequeue())
 
 
-print(q)
+//print(q)
 
 
 
