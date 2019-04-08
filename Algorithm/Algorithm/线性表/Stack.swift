@@ -8,3 +8,19 @@
 
 //栈
 import Foundation
+
+struct Stack<T> {
+    fileprivate var array:[T] = [T]()
+    
+    public mutating func push(_ element:T){
+        array.append(element)
+    }
+    
+    public mutating func pop() -> T?{
+        return array.popLast()
+    }
+    
+    public var isEmpty:Bool{
+        return array.isEmpty
+    }
+}
