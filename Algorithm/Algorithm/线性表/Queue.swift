@@ -27,7 +27,7 @@ struct Queue<T>{
     }
 }
 
-//MARK:高效的队列
+//MARK:高效的队列,结局数据搬移问题
 
 //在出队的时候处理
 struct QueueHigh1<T> {
@@ -64,10 +64,14 @@ struct QueueHigh1<T> {
 
 //在入队的时候处理
 struct QueueHigh2<T> {
-    //TODO:数组是动态数组,有问题
-    fileprivate var array = [T?]()
+    
+    fileprivate var array:[T?]
     fileprivate var head = 0
     fileprivate var tail = 0
+    
+    init(count:Int) {
+        array = Array.init(repeating: nil, count: count)
+    }
     
     public mutating func dequeue() -> T?{
         //队空,返回nil
@@ -83,10 +87,12 @@ struct QueueHigh2<T> {
     
     
     public mutating func enqueue(_ element:T){
-        if tail == array.count - 1{//队满
+        if tail == array.count{//队满
             if head == 0 {
-                fatalError("队列满了")
+                print("队列满了")
+                return
             }
+            //把头到尾中间的数据 搬到0到头的位置
             for i in head ..< tail{
                 array[i-head] = array[i]
             }
@@ -98,4 +104,58 @@ struct QueueHigh2<T> {
         }
     }
     
+}
+
+//基于链表
+struct Queue3<T> where T:Equatable{
+    fileprivate var list:LinkedList<T>
+    
+    public func enqueue(_ element:T){
+        list.append(element)
+    }
+    
+    public func dequeue(){
+        if list.isEmpty{
+            return
+        }else{
+            list.remove(node: list.head!)
+        }
+    }
+}
+
+/*****
+循环队列
+重点: 判断队满和队空
+******/
+struct CycleQueue<T> {
+    fileprivate var array:[T?]
+    fileprivate var maxCount:Int
+    fileprivate var head = 0
+    fileprivate var tail = 0
+    
+    init(count:Int) {
+        array = Array.init(repeating: nil, count: count)
+        maxCount = count
+    }
+    
+    public mutating func enqueue(_ element:T){
+        if (tail + 1) % maxCount == head { //队满
+            print("full")
+            return
+        }else{
+            array[tail % maxCount] = element
+            tail += 1
+        }
+    }
+    
+    @discardableResult public mutating func dequeue() -> T?{
+        if tail == head {
+            print("empty")
+            return nil
+        }else{
+            let result = array[head]
+            head += 1
+            return result
+        }
+    }
 }

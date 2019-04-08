@@ -58,14 +58,18 @@ import Foundation
 //print(l.list)
 
 
-var q = QueueHigh2<Int>()
+var q = CycleQueue<Int>.init(count:3)
 q.enqueue(1)
 q.enqueue(2)
 q.enqueue(3)
-q.dequeue()
-q.dequeue()
-q.dequeue()
-print(q.dequeue())
+q.enqueue(3)
+//q.enqueue(3)
+//q.enqueue(3)
+
+//q.dequeue()
+//q.dequeue()
+//q.dequeue()
+//print(q.dequeue())
 
 
 print(q)
