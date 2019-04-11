@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class LinkedList<T> where T:Equatable{
+public class LinkedList<T> where T:Hashable{
     //上次查找的index
     private var lastResultIndex:Int?
     
@@ -164,4 +164,13 @@ extension LinkedList:CustomStringConvertible{
     }
 }
 
-
+extension LinkedList{
+    public func reverse() {
+        var node = head
+        while let currentNode = node {
+            node = currentNode.next
+            swap(&currentNode.next, &currentNode.previous)
+            head = currentNode
+        }
+    }
+}

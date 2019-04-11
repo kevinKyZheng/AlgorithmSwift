@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class LinkedListNode<T> where T:Equatable{
+public class LinkedListNode<T> where T:Hashable{
     var value:T
     var next:LinkedListNode<T>?
     var previous:LinkedListNode<T>?
@@ -25,3 +25,14 @@ extension LinkedListNode:CustomStringConvertible{
     }
     
 }
+
+extension LinkedListNode:Hashable{
+    public static func == (lhs: LinkedListNode<T>, rhs: LinkedListNode<T>) -> Bool {
+        return lhs.value == rhs.value
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(value)
+    }
+}
+

@@ -93,3 +93,46 @@ extension SingleLinkedList:CustomStringConvertible{
         return s + "]"
     }
 }
+
+extension SingleLinkedNode:CustomStringConvertible{
+    public var description: String{
+        var s = "["
+        s += "\(value)"
+        var node = self.next
+        if node != nil {s += ", "}
+
+        while node != nil{
+            s += "\(node!.value)"
+            node = node!.next
+            if node != nil {s += ", "}
+        }
+        return s + "]"
+    }
+}
+/**
+ 单链表翻转
+ 遍历法
+ */
+extension SingleLinkedList{
+    mutating func reverse(){
+        guard var pre = head else { return  }
+        
+        guard var cur = head?.next else { return  }
+        
+        //处理原来的头结点
+        pre.next = nil
+        
+        while let next = cur.next {
+            cur.next = pre
+            pre = cur
+            cur = next
+        }
+        
+//        处理最后一个节点
+        cur.next = pre
+        head = cur
+        
+    }
+    
+
+}

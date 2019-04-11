@@ -107,7 +107,7 @@ struct QueueHigh2<T> {
 }
 
 //基于链表
-struct Queue3<T> where T:Equatable{
+struct Queue3<T> where T:Hashable{
     fileprivate var list:LinkedList<T>
     
     public func enqueue(_ element:T){
