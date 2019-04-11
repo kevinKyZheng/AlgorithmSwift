@@ -76,3 +76,104 @@ public func kyheapsort<T>(_ a: [T], _ sort: @escaping (T, T) -> Bool) -> [T] {
 }
 
 
+//MARK:冒泡排序
+/**
+ 两种遍历方式:
+ */
+
+// TODO: 差别是什么
+
+public func bobbleSort<T:Comparable>(_ arr:[T],_ sort:@escaping (T, T) -> Bool) -> [T]{
+    var result = arr
+    
+    //从后往前遍历
+//    for i in 0 ..< result.count{
+//        for j in (i ..< result.count - 1).reversed() {
+//            if sort(result[j],arr[j+1]){
+//                result.swapAt(j, j+1)
+//            }
+//        }
+//    }
+    
+    //从前往后遍历
+    for i in 0 ..< result.count{
+        for j in i+1 ..< result.count{
+            if sort(result[j],result[j-1]){
+                result.swapAt(j, j-1)
+            }
+        }
+    }
+    
+    
+    return result
+}
+
+//MARK:插入排序
+
+public func insertSort<T:Comparable>(_ arr:[T],_ sort:@escaping (T,T) -> Bool) -> [T]{
+    var result = arr
+    for i in 1 ..< result.count{
+        let key = result[i]
+        var j = i
+        while j > 0 && sort(key,result[j - 1]){
+            result[j] = result[j - 1]
+            j -= 1
+        }
+        result[j] = key
+    }
+    
+    return result
+}
+
+func insertSort(_ array:[Int]) -> [Int]{
+    var arr = array,key:Int,j:Int
+    for i in 1 ..< arr.count {
+        j = i
+        key = arr[j]
+        while j > 0 && arr[j-1] > key{
+            arr[j] = arr[j-1]
+            j -= 1
+        }
+        arr[j] = key
+    }
+    return arr
+}
+
+//MARK: 选择排序
+//找数组最小index
+func findSmallest(_ arr:[Int])->Int{
+    var smallest = arr[0]
+    var smallestIndex = 0
+    for i in 0..<arr.count {
+        if arr[i] < smallest{
+            smallest = arr[i]
+            smallestIndex = i
+        }
+    }
+    return smallestIndex
+}
+
+func selectSort(_ array:[Int])->[Int]{
+    var result:[Int] = []
+    var smallIndex:Int
+    var arr = array
+    for _ in 0..<arr.count{
+        smallIndex = findSmallest(arr)
+        result.append(arr[smallIndex])
+        arr.remove(at: smallIndex)
+    }
+    return result
+}
+//func selectSort2(_ array:[Int]) -> [Int]{
+//    var arr = array
+//    for i in arr.indices {
+//        var minIndex = i
+//        for j in i+1 ..< arr.count{
+//            if arr[j] < arr[minIndex]{
+//                minIndex = j
+//            }
+//        }
+//        swap(&arr, minIndex, i)
+//    }
+//    return arr
+//}
